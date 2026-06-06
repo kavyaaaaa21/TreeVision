@@ -1,0 +1,27 @@
+# TreeVision — Python dependencies
+# Install with: pip install -r requirements.txt
+
+# Web framework
+fastapi==0.111.0
+uvicorn[standard]==0.29.0
+python-multipart==0.0.9      # required for FastAPI file uploads
+pydantic==2.7.1
+
+# ML — tree detection
+ultralytics==8.2.18          # YOLO v8 — loads TreeVision_best.pt
+
+# Image processing
+Pillow==10.3.0
+opencv-python-headless==4.9.0.80
+numpy==1.26.4
+
+# Geospatial
+rasterio==1.3.10             # GeoTIFF reading + affine transforms
+geopandas==0.14.4            # GeoPackage export
+shapely==2.0.4               # polygon geometry + metrics
+pyproj==3.6.1                # CRS reprojection (pixel → lat/lon)
+
+# Dev / testing
+pytest==8.2.0
+httpx==0.27.0                # async test client for FastAPI
+python-dotenv==1.0.1         # loads .env into os.environ
